@@ -78,6 +78,9 @@ padding: .66rem 0 .66rem .5rem;
 nav {
     background-color: firebrick;
 }
+nav span {
+    display: none;
+}
 
 nav .container {
     color: white;
@@ -122,6 +125,7 @@ nav .container {
 }
 
 .description {
+    padding: 0.5rem 0rem;
     display: flex;
     justify-content: center;
     color: white;
@@ -159,4 +163,110 @@ footer {
 
 footer .container {
     padding-top: 2rem;
+}
+
+                    /* Media Query */
+
+/* Tablet size */
+
+@media only screen and (min-width: 551px) and (max-width: 768px) {
+    nav .container{
+        display: none;
+    }
+
+    nav span {
+        color: white;
+        padding: .75rem 0rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .products {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .product, .product-watch {
+        width: 47%;
+    }
+
+    .product-glasses {
+        display: none;
+    }
+
+    .info {
+        margin-left: 0rem;
+    }
+}
+
+/* Mobile View */
+
+@media only screen and (max-width: 550px) {
+    .main-banner .headlines {
+        width: 100%;
+    }
+
+    .headlines {
+        width: 100%;
+        padding: 0;
+        top: 22rem;
+    }
+
+    .main-banner h4 {
+        font-family: Helvetica;
+        font-size: .77rem;
+        font-weight: bold;
+    }
+
+    .main-banner h1 {
+        font-family: Helvetica;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    nav span {
+        color: white;
+        padding: .75rem 0rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .container {
+        width: 100%;
+        display: none;
+    }
+
+    .product {
+        width: 90%;
+        margin-top: 3rem;
+        border: 4px solid black;
+    }
+
+    .product-image img {
+        height: 9rem;
+        width: 71%;
+        margin-left: 3rem;
+        padding: 2rem 0rem 2rem 0rem;
+    }
+
+    .product-watch,
+    .product-glasses {
+        display: none;
+    }
+
+    .business-info {
+        display: block;
+        margin-left: 1rem;
+    }
+
+    .info {
+        width: 95%;
+    }
+
+    footer .container {
+        text-align: center;
+    }
+
 }
